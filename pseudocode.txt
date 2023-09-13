@@ -1,0 +1,45 @@
+display:
+paddles = 2 turtles
+ball = 1 turtle
+goal = 2 turtles
+walls = 2 turtles
+
+logic:
+
+create walls
+create goals
+create players
+create ball
+
+while player1_score < 11 and player2_score < 11
+
+	check_hit_player(player)
+		check if ball is within certain distance of paddle
+		return True if near paddle
+
+	check_hit_wall
+		check if ball has hit wall
+		return True if hit wall
+
+	if check_hit_player
+		check_direction
+		change_direction (left or right)
+		change_heading (up or down diagonal)
+	
+	if check_hit_wall
+		check_direction
+		change_heading (up or down diagonal)
+
+	if check_hit_goal
+		update_score
+		display_score
+		check_win
+		if win
+		 	display_winner
+			break
+	
+	ball_move(ball)
+		
+		
+	
+	-
